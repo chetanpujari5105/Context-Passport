@@ -1,0 +1,39 @@
+{
+  "name": "context-passport",
+  "version": "0.1.0",
+  "description": "A local CLI that creates compact coding-session handoffs for switching AI accounts.",
+  "type": "module",
+  "bin": {
+    "context-passport": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "ai",
+    "cli",
+    "context",
+    "tokens",
+    "codex",
+    "claude"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chetanpujari5105/Context-Passport.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "clipboardy": "^4.0.0",
+    "commander": "^12.1.0"
+  }
+}
