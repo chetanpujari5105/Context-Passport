@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0f1c" />
+    <meta
+      name="description"
+      content="Context Passport is a local CLI that creates compact coding-session handoffs when you switch AI accounts."
+    />
+    <meta property="og:title" content="Context Passport — switch AI accounts without losing context" />
+    <meta
+      property="og:description"
+      content="A local, zero-LLM CLI that turns your coding session into a compact handoff.md."
+    />
+    <meta property="og:type" content="website" />
+    <title>Context Passport — keep your coding context moving</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Context Passport home">
+          <span class="brand-mark" aria-hidden="true">CP</span>
+          <span>Context Passport</span>
+        </a>
+        <div class="nav-links">
+          <a href="#problem">Problem</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#commands">Commands</a>
+          <a href="#quick-start">Quick start</a>
+          <a href="#tools">Tools</a>
+        </div>
+        <a
+          class="nav-github"
+          href="https://github.com/chetanpujari5105/Context-Passport"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span aria-hidden="true">↗</span> GitHub
+        </a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section" id="top">
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> LOCAL-FIRST CONTEXT HANDOFFS</p>
+            <p class="hero-claim">Switch AI accounts. <span>Keep your context.</span></p>
+            <h1>Context Passport is a local CLI for developers who switch between AI coding accounts and need a <em>compact, structured handoff</em> instead of re-explaining their project from scratch.</h1>
+            <p class="hero-statement">
+              When an AI account hits a rate limit, changing to another account often means pasting a huge chat history
+              and retelling the same project story.
+            </p>
+            <p class="hero-problem">
+              Rate limit hit? Turn your local session and Git state into a small <code>handoff.md</code>—without an LLM,
+              an API key, or an upload.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://github.com/chetanpujari5105/Context-Passport"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View on GitHub <span aria-hidden="true">↗</span>
+              </a>
+              <button class="button button-secondary" type="button" data-copy-target="hero-install">
+                <span class="button-icon" aria-hidden="true">⧉</span>
+                <span class="button-label">Copy install</span>
+              </button>
+            </div>
+            <div class="micro-proof" aria-label="Core product guarantees">
+              <span>Zero LLM calls</span><span aria-hidden="true">•</span><span>Works offline</span><span aria-hidden="true">•</span><span>MIT licensed</span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Example Context Passport terminal output">
+            <div class="terminal terminal-hero">
+              <div class="terminal-bar">
+                <span class="terminal-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="terminal-title">context-passport — local session</span>
+                <span class="terminal-status">ready</span>
+              </div>
+              <div class="terminal-body">
+                <p class="terminal-command"><span class="prompt">$</span> <code id="hero-install">npm install</code></p>
+                <p class="terminal-command"><span class="prompt">$</span> <code>node bin/cli.js export</code></p>
+                <p class="terminal-success">✓ Wrote handoff.md</p>
+                <div class="handoff-preview">
+                  <p><span>#</span> Context Passport Handoff</p>
+                  <p class="preview-label">Goal</p>
+                  <p>Build a local CLI that creates compact coding-session handoffs.</p>
+                  <p class="preview-label">Next Step</p>
+                  <p>Run the tests and paste this into the new session.</p>
+                </div>
+                <p class="terminal-cursor"><span class="prompt">$</span> <span aria-hidden="true"></span></p>
+              </div>
+            </div>
+            <div class="passport-stamp" aria-hidden="true"><span>CONTEXT</span><strong>CP</strong><span>LOCAL ONLY</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-surface" id="problem">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">THE PROBLEM</p>
+            <h2>Every account switch should not feel like starting over.</h2>
+            <p>
+              When a coding account reaches its limit, the usual workaround is a giant context paste: project history,
+              decisions, files, errors, and the next step—all typed again from memory.
+            </p>
+          </div>
+
+          <div class="comparison reveal">
+            <article class="comparison-card comparison-before">
+              <div class="comparison-heading"><span class="comparison-dot" aria-hidden="true"></span><h3>Without Context Passport</h3></div>
+              <p class="comparison-caption">A wall of context to recreate by hand.</p>
+              <div class="manual-paste" aria-label="Example manual context paste">
+                <p>“I’m working on a CLI in a new repo. Here are the last 200 messages, the package setup, the error output, the files I changed, and the decisions we made…”</p>
+                <span class="blur-line w-92"></span><span class="blur-line w-100"></span><span class="blur-line w-76"></span><span class="blur-line w-88"></span><span class="blur-line w-54"></span>
+              </div>
+              <p class="comparison-metric">Thousands of tokens. Repeated explanation.</p>
+            </article>
+
+            <div class="comparison-arrow" aria-hidden="true"><span>→</span></div>
+
+            <article class="comparison-card comparison-after">
+              <div class="comparison-heading"><span class="comparison-dot success" aria-hidden="true"></span><h3>With Context Passport</h3></div>
+              <p class="comparison-caption">A compact, structured handoff.</p>
+              <pre class="mini-handoff"><code><span class="code-heading"># Context Passport Handoff</span>
+
+<span class="code-label">## Goal</span>
+Build a local CLI that creates compact
+coding-session handoffs.
+
+<span class="code-label">## Decisions Locked</span>
+• Plain Node.js. No LLM or API calls.
+
+<span class="code-label">## Next Step</span>
+Run the tests and paste this into the
+new session.</code></pre>
+              <p class="comparison-metric success-text">Small enough to scan. Ready to paste.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">HOW IT WORKS</p>
+            <h2>Your local state, made portable.</h2>
+            <p>A deterministic handoff flow designed to preserve signal—not recreate a chat transcript.</p>
+          </div>
+
+          <ol class="flow-grid">
+            <li class="flow-card reveal">
+              <span class="flow-number">01</span>
+              <span class="flow-icon" aria-hidden="true">⌕</span>
+              <h3>Detect session</h3>
+              <p>Find the newest matching local coding-session log for your project.</p>
+            </li>
+            <li class="flow-card reveal">
+              <span class="flow-number">02</span>
+              <span class="flow-icon" aria-hidden="true">⇢</span>
+              <h3>Extract deterministically</h3>
+              <p>Read useful text and Git state with local parsing—never an LLM call.</p>
+            </li>
+            <li class="flow-card reveal">
+              <span class="flow-number">03</span>
+              <span class="flow-icon" aria-hidden="true">▤</span>
+              <h3>Render handoff.md</h3>
+              <p>Package the goal, decisions, files, state, errors, and next step compactly.</p>
+            </li>
+            <li class="flow-card reveal">
+              <span class="flow-number">04</span>
+              <span class="flow-icon" aria-hidden="true">↗</span>
+              <h3>Paste and continue</h3>
+              <p>Start the next AI account with the context it needs to keep moving.</p>
+            </li>
+          </ol>
+
+          <aside class="trust-banner reveal" aria-label="Why local-only matters">
+            <div class="trust-icon" aria-hidden="true">⌁</div>
+            <div>
+              <strong>No LLM calls. No API key. No chat upload.</strong>
+              <p>Your session logs stay on your machine; only the handoff you choose to paste leaves it.</p>
+            </div>
+            <span class="trust-badge">LOCAL ONLY</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-surface" id="commands">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">COMMAND REFERENCE</p>
+            <h2>Small command surface. Useful handoffs.</h2>
+            <p>Everything you need is built into the local CLI.</p>
+          </div>
+
+          <div class="commands-table-wrap reveal" role="region" aria-label="Context Passport command reference" tabindex="0">
+            <table class="commands-table">
+              <thead>
+                <tr><th>Command</th><th>Flags</th><th>What it does</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>context-passport export</code></td>
+                  <td><code>--tool &lt;codex|claude|cursor&gt;</code></td>
+                  <td>Detects the newest matching local session log, extracts context, and writes <code>handoff.md</code>.</td>
+                </tr>
+                <tr>
+                  <td><code>context-passport show</code></td>
+                  <td><code>--clipboard</code></td>
+                  <td>Prints <code>handoff.md</code>, or copies it to the clipboard.</td>
+                </tr>
+                <tr>
+                  <td><code>context-passport inject</code></td>
+                  <td><span class="muted">—</span></td>
+                  <td>Inserts the handoff into <code>AGENTS.md</code>, preferring it over <code>CLAUDE.md</code>; re-runs replace the old block.</td>
+                </tr>
+                <tr>
+                  <td><code>context-passport watch</code></td>
+                  <td><code>--interval &lt;minutes&gt;</code><br /><code>--tool &lt;name&gt;</code></td>
+                  <td>Refreshes <code>handoff.md</code> on a timer; the default is every 10 minutes.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-scroll-hint">On a phone, swipe the command table to see every flag and description <span aria-hidden="true">→</span></p>
+          <p class="command-note reveal"><code>--tool</code> also works before export: <code>context-passport --tool codex export</code></p>
+        </div>
+      </section>
+
+      <section class="section" id="quick-start">
+        <div class="container quick-start-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow">QUICK START</p>
+            <h2>From zero to a handoff in three commands.</h2>
+            <p>Clone the project, install dependencies, and generate your first local handoff.</p>
+          </div>
+          <ol class="quick-steps">
+            <li class="quick-step reveal">
+              <span class="step-count">1</span>
+              <div>
+                <h3>Clone the repository</h3>
+                <div class="code-block">
+                  <code id="quick-clone">git clone https://github.com/chetanpujari5105/Context-Passport.git
+cd Context-Passport</code>
+                  <button type="button" data-copy-target="quick-clone" aria-label="Copy clone commands"><span aria-hidden="true">⧉</span><span class="button-label">Copy</span></button>
+                </div>
+              </div>
+            </li>
+            <li class="quick-step reveal">
+              <span class="step-count">2</span>
+              <div>
+                <h3>Install dependencies</h3>
+                <div class="code-block">
+                  <code id="quick-install">npm install</code>
+                  <button type="button" data-copy-target="quick-install" aria-label="Copy install command"><span aria-hidden="true">⧉</span><span class="button-label">Copy</span></button>
+                </div>
+              </div>
+            </li>
+            <li class="quick-step reveal">
+              <span class="step-count">3</span>
+              <div>
+                <h3>Export your handoff</h3>
+                <div class="code-block">
+                  <code id="quick-export">node bin/cli.js export</code>
+                  <button type="button" data-copy-target="quick-export" aria-label="Copy export command"><span aria-hidden="true">⧉</span><span class="button-label">Copy</span></button>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section-surface" id="tools">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">SUPPORTED TOOLS</p>
+            <h2>Built for the accounts developers actually switch between.</h2>
+            <p>Adapters are pluggable, local, and graceful when a session log is missing.</p>
+          </div>
+          <div class="tools-grid reveal">
+            <article class="tool-card"><div class="tool-card-top"><span class="tool-logo codex-logo">◈</span><span class="status-pill full">FULLY SUPPORTED</span></div><h3>Codex</h3><code>~/.codex/sessions/**/*.jsonl</code></article>
+            <article class="tool-card"><div class="tool-card-top"><span class="tool-logo claude-logo">✦</span><span class="status-pill full">FULLY SUPPORTED</span></div><h3>Claude Code</h3><code>~/.claude/projects/**/*.jsonl</code></article>
+            <article class="tool-card"><div class="tool-card-top"><span class="tool-logo cursor-logo">⌁</span><span class="status-pill experimental">EXPERIMENTAL</span></div><h3>Cursor</h3><code>Best-effort local .cursor logs</code></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark" aria-hidden="true">CP</span><span>Context Passport</span></a>
+        <p>Open source under the MIT License.</p>
+        <div class="footer-links">
+          <a href="https://github.com/chetanpujari5105/Context-Passport" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/chetanpujari5105/Context-Passport/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer">Contribute <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
