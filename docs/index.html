@@ -9,6 +9,11 @@
     <meta property="og:description" content="A local CLI for compact, structured AI coding-session handoffs. No LLM calls. No chat upload." />
     <meta property="og:type" content="website" />
     <title>Context Passport — keep the work moving</title>
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
@@ -17,7 +22,16 @@
 
     <header class="site-header">
       <nav class="nav container" aria-label="Primary navigation">
-        <a class="brand" href="#top" aria-label="Context Passport home"><span class="brand-mark" aria-hidden="true">cp</span><span>Context Passport</span></a>
+        <a class="brand brand-logo" href="#top" aria-label="Context Passport home">
+          <picture class="brand-lockup">
+            <source srcset="assets/logo-full.webp" type="image/webp" />
+            <img src="assets/logo-full.png" width="1200" height="328" alt="" />
+          </picture>
+          <picture class="brand-icon">
+            <source srcset="assets/logo-icon.webp" type="image/webp" />
+            <img src="assets/logo-icon.png" width="512" height="512" alt="" />
+          </picture>
+        </a>
         <div class="nav-links">
           <a href="#problem">Problem</a>
           <a href="#how-it-works">How it works</a>
@@ -138,7 +152,16 @@ cd Context-Passport</code><button type="button" data-copy-target="quick-clone" a
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <a class="brand brand-inverse" href="#top" aria-label="Back to top"><span class="brand-mark" aria-hidden="true">cp</span><span>Context Passport</span></a>
+        <a class="brand brand-logo brand-logo-footer" href="#top" aria-label="Back to top">
+          <picture class="brand-lockup">
+            <source srcset="assets/logo-full.webp" type="image/webp" />
+            <img src="assets/logo-full.png" width="1200" height="328" alt="" />
+          </picture>
+          <picture class="brand-icon">
+            <source srcset="assets/logo-icon.webp" type="image/webp" />
+            <img src="assets/logo-icon.png" width="512" height="512" alt="" />
+          </picture>
+        </a>
         <p>Open source under the MIT License.</p>
         <div class="footer-links"><a href="https://github.com/chetanpujari5105/Context-Passport" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://github.com/chetanpujari5105/Context-Passport/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contribute ↗</a></div>
       </div>
